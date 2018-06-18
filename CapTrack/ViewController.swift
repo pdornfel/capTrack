@@ -10,9 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var needToShoot: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        configureView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +22,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func calculate(_ sender: Any, forEvent event: UIEvent) {
+        print("foo")
+    }
+    
+    // views
+    func configureView() {
+        print("loaded")
+    }
+    
+    
 }
 
