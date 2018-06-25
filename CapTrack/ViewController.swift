@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     
     // views
     func configureView() {
-        if  let slope = Double(slopeInput.text!), let rating = Double(ratingInput.text!), let index = Double(indexInput.text!), let score = Int(scoreInput.text!), let times = Int(timesLabel.text!) {
+        if  let slope = Double(slopeInput.text!), let rating = Double(ratingInput.text!), let index = Double(indexInput.text!), let score = Double(scoreInput.text!), let times = Double(timesLabel.text!) {
             let calc = HandicapCalculator.init(slope: slope, rating: rating, index: index)
             let handicap = calc.calculateHandicap(shooting: score, times: times)
             wouldBeHandicapLabel.text = "\(handicap)"
