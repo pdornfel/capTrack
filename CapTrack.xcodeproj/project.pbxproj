@@ -13,6 +13,7 @@
 		F296ACD520D303300059AF8A /* CapTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F296ACD320D303300059AF8A /* CapTrack.xcdatamodeld */; };
 		F296ACD720D303330059AF8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F296ACD620D303330059AF8A /* Assets.xcassets */; };
 		F296ACDA20D303330059AF8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F296ACD820D303330059AF8A /* LaunchScreen.storyboard */; };
+		F2BDA8F720D8416E0072EB34 /* HandicapCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BDA8F620D8416E0072EB34 /* HandicapCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F296ACD620D303330059AF8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F296ACD920D303330059AF8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F296ACDB20D303330059AF8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2BDA8F620D8416E0072EB34 /* HandicapCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				F296ACD820D303330059AF8A /* LaunchScreen.storyboard */,
 				F296ACDB20D303330059AF8A /* Info.plist */,
 				F296ACD320D303300059AF8A /* CapTrack.xcdatamodeld */,
+				F2BDA8F620D8416E0072EB34 /* HandicapCalculator.swift */,
 			);
 			path = CapTrack;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F296ACCF20D303300059AF8A /* ViewController.swift in Sources */,
+				F2BDA8F720D8416E0072EB34 /* HandicapCalculator.swift in Sources */,
 				F296ACCD20D303300059AF8A /* AppDelegate.swift in Sources */,
 				F296ACD520D303300059AF8A /* CapTrack.xcdatamodeld in Sources */,
 			);
