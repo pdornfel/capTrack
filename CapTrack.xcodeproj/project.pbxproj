@@ -10,7 +10,6 @@
 		F296ACCD20D303300059AF8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F296ACCC20D303300059AF8A /* AppDelegate.swift */; };
 		F296ACCF20D303300059AF8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F296ACCE20D303300059AF8A /* ViewController.swift */; };
 		F296ACD220D303300059AF8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F296ACD020D303300059AF8A /* Main.storyboard */; };
-		F296ACD520D303300059AF8A /* CapTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F296ACD320D303300059AF8A /* CapTrack.xcdatamodeld */; };
 		F296ACD720D303330059AF8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F296ACD620D303330059AF8A /* Assets.xcassets */; };
 		F296ACDA20D303330059AF8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F296ACD820D303330059AF8A /* LaunchScreen.storyboard */; };
 		F2BDA8F720D8416E0072EB34 /* HandicapCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BDA8F620D8416E0072EB34 /* HandicapCalculator.swift */; };
@@ -21,7 +20,6 @@
 		F296ACCC20D303300059AF8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F296ACCE20D303300059AF8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F296ACD120D303300059AF8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F296ACD420D303300059AF8A /* CapTrack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CapTrack.xcdatamodel; sourceTree = "<group>"; };
 		F296ACD620D303330059AF8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F296ACD920D303330059AF8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F296ACDB20D303330059AF8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,7 +62,6 @@
 				F296ACD620D303330059AF8A /* Assets.xcassets */,
 				F296ACD820D303330059AF8A /* LaunchScreen.storyboard */,
 				F296ACDB20D303330059AF8A /* Info.plist */,
-				F296ACD320D303300059AF8A /* CapTrack.xcdatamodeld */,
 				F2BDA8F620D8416E0072EB34 /* HandicapCalculator.swift */,
 			);
 			path = CapTrack;
@@ -144,7 +141,6 @@
 				F296ACCF20D303300059AF8A /* ViewController.swift in Sources */,
 				F2BDA8F720D8416E0072EB34 /* HandicapCalculator.swift in Sources */,
 				F296ACCD20D303300059AF8A /* AppDelegate.swift in Sources */,
-				F296ACD520D303300059AF8A /* CapTrack.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,19 +338,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		F296ACD320D303300059AF8A /* CapTrack.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				F296ACD420D303300059AF8A /* CapTrack.xcdatamodel */,
-			);
-			currentVersion = F296ACD420D303300059AF8A /* CapTrack.xcdatamodel */;
-			path = CapTrack.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = F296ACC120D3032F0059AF8A /* Project object */;
 }
