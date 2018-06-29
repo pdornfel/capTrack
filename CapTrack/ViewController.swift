@@ -24,11 +24,24 @@ class ViewController: UIViewController {
     
     // CoreData
     var handicap: Handicap?
-    //var context: NSManagedObjectContext?
     let managedObjectContext = CoreDataStack().managedObjectContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //init toolbar
+        let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: self.view.frame.size.width, height: 30))
+
+        let flexSpace = UIBarButtonItem(barButtonSystemItem:    .flexibleSpace, target: nil, action: nil)
+        let doneBtn: UIBarButtonItem = UIBarButtonItem(title:"Done", style:.done, target:self, action: #selector(self.doneButtonAction))
+        
+        toolbar.setItems([flexSpace, doneBtn], animated: true)
+        toolbar.sizeToFit()
+    
+        slopeInput.inputAccessoryView = toolbar
+        indexInput.inputAccessoryView = toolbar
+        ratingInput.inputAccessoryView = toolbar
+        scoreInput.inputAccessoryView = toolbar
         
         let request: NSFetchRequest<Handicap> = Handicap.singleHandicapRequest()
         do {
@@ -59,6 +72,11 @@ class ViewController: UIViewController {
         }
         
         configureView()
+    }
+    
+    @objc func doneButtonAction() {
+        print("foo")
+        self.view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
