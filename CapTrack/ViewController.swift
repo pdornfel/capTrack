@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
 
@@ -21,14 +22,47 @@ class ViewController: UIViewController {
     @IBOutlet weak var slopeInput: UITextField!
     @IBOutlet weak var scoreInput: UITextField!
     
+    // CoreData
+    var handicap: Handicap?
+    //var context: NSManagedObjectContext?
+    let managedObjectContext = CoreDataStack().managedObjectContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let request: NSFetchRequest<Handicap> = Handicap.singleHandicapRequest()
+        do {
+            handicap = try managedObjectContext.fetch(request).first
+            
+            if handicap == nil {
+                handicap = (NSEntityDescription.insertNewObject(forEntityName: "Handicap", into: managedObjectContext) as! Handicap)
+            }
+            
+        } catch {
+            print("error")
+        }
+        
+        if let score = handicap?.score {
+            scoreInput.text = "\(score)"
+        }
+        
+        if let index = handicap?.index {
+            indexInput.text = "\(index)"
+        }
+        
+        if let rating = handicap?.rating {
+            ratingInput.text = "\(rating)"
+        }
+        
+        if let slope = handicap?.slope {
+            slopeInput.text = "\(slope)"
+        }
+        
         configureView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func calculate(_ sender: Any, forEvent event: UIEvent) {
@@ -42,12 +76,45 @@ class ViewController: UIViewController {
     
     // views
     func configureView() {
-        if  let slope = Double(slopeInput.text!), let rating = Double(ratingInput.text!), let index = Double(indexInput.text!), let score = Double(scoreInput.text!), let times = Double(timesLabel.text!) {
-            let calc = HandicapCalculator.init(slope: slope, rating: rating, index: index)
-            let handicap = calc.calculateHandicap(shooting: score, times: times)
-            wouldBeHandicapLabel.text = "\(handicap)"
-            handicapIsLabel.text = "\(calc.currentHandicap)"
+        
+        guard let handicap = handicap else { return }
+        
+        if let stringVal = indexInput.text, let DoubleVal = Double(stringVal) {
+            handicap.index = DoubleVal
         }
+        
+        if let stringVal = slopeInput.text, let DoubleVal = Double(stringVal) {
+            handicap.slope = DoubleVal
+        }
+        
+        if let stringVal = ratingInput.text, let DoubleVal = Double(stringVal) {
+            handicap.rating = DoubleVal
+        }
+        
+        if let stringVal = scoreInput.text, let DoubleVal = Double(stringVal) {
+            handicap.score = DoubleVal
+        }
+        
+        if let stringVal = timesLabel.text, let DoubleVal = Double(stringVal) {
+            handicap.multiplier = DoubleVal
+        }
+        
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print("error saving")
+        }
+        
+        let score = handicap.score
+        let slope = handicap.slope
+        let rating = handicap.rating
+        let index = handicap.index
+        let multiplier = handicap.multiplier
+        
+        let calc = HandicapCalculator.init(slope: slope, rating: rating, index: index)
+        let wouldBeHandicap = calc.calculateHandicap(shooting: score, multiplier: multiplier)
+        wouldBeHandicapLabel.text = "\(wouldBeHandicap)"
+        handicapIsLabel.text = "\(calc.currentHandicap())"
     }
     
     

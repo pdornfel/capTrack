@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F24A674520E539E200C1B0BF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24A674120E539E200C1B0BF /* CoreDataStack.swift */; };
+		F24A674820E539E200C1B0BF /* HandicapCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24A674420E539E200C1B0BF /* HandicapCalculator.swift */; };
+		F24A674B20E5763200C1B0BF /* HandicapTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F24A674920E5763200C1B0BF /* HandicapTracker.xcdatamodeld */; };
+		F24A674E20E5784300C1B0BF /* Handicap+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24A674C20E5784300C1B0BF /* Handicap+CoreDataClass.swift */; };
+		F24A674F20E5784300C1B0BF /* Handicap+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24A674D20E5784300C1B0BF /* Handicap+CoreDataProperties.swift */; };
 		F296ACCD20D303300059AF8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F296ACCC20D303300059AF8A /* AppDelegate.swift */; };
 		F296ACCF20D303300059AF8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F296ACCE20D303300059AF8A /* ViewController.swift */; };
 		F296ACD220D303300059AF8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F296ACD020D303300059AF8A /* Main.storyboard */; };
 		F296ACD720D303330059AF8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F296ACD620D303330059AF8A /* Assets.xcassets */; };
 		F296ACDA20D303330059AF8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F296ACD820D303330059AF8A /* LaunchScreen.storyboard */; };
-		F2BDA8F720D8416E0072EB34 /* HandicapCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BDA8F620D8416E0072EB34 /* HandicapCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F24A674120E539E200C1B0BF /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		F24A674420E539E200C1B0BF /* HandicapCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandicapCalculator.swift; sourceTree = "<group>"; };
+		F24A674A20E5763200C1B0BF /* HandicapTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HandicapTracker.xcdatamodel; sourceTree = "<group>"; };
+		F24A674C20E5784300C1B0BF /* Handicap+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Handicap+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F24A674D20E5784300C1B0BF /* Handicap+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Handicap+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F296ACC920D303300059AF8A /* CapTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F296ACCC20D303300059AF8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F296ACCE20D303300059AF8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +32,6 @@
 		F296ACD620D303330059AF8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F296ACD920D303330059AF8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F296ACDB20D303330059AF8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F2BDA8F620D8416E0072EB34 /* HandicapCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandicapCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +70,11 @@
 				F296ACD620D303330059AF8A /* Assets.xcassets */,
 				F296ACD820D303330059AF8A /* LaunchScreen.storyboard */,
 				F296ACDB20D303330059AF8A /* Info.plist */,
-				F2BDA8F620D8416E0072EB34 /* HandicapCalculator.swift */,
+				F24A674120E539E200C1B0BF /* CoreDataStack.swift */,
+				F24A674920E5763200C1B0BF /* HandicapTracker.xcdatamodeld */,
+				F24A674420E539E200C1B0BF /* HandicapCalculator.swift */,
+				F24A674C20E5784300C1B0BF /* Handicap+CoreDataClass.swift */,
+				F24A674D20E5784300C1B0BF /* Handicap+CoreDataProperties.swift */,
 			);
 			path = CapTrack;
 			sourceTree = "<group>";
@@ -139,8 +151,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F296ACCF20D303300059AF8A /* ViewController.swift in Sources */,
-				F2BDA8F720D8416E0072EB34 /* HandicapCalculator.swift in Sources */,
 				F296ACCD20D303300059AF8A /* AppDelegate.swift in Sources */,
+				F24A674820E539E200C1B0BF /* HandicapCalculator.swift in Sources */,
+				F24A674F20E5784300C1B0BF /* Handicap+CoreDataProperties.swift in Sources */,
+				F24A674E20E5784300C1B0BF /* Handicap+CoreDataClass.swift in Sources */,
+				F24A674520E539E200C1B0BF /* CoreDataStack.swift in Sources */,
+				F24A674B20E5763200C1B0BF /* HandicapTracker.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +354,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F24A674920E5763200C1B0BF /* HandicapTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F24A674A20E5763200C1B0BF /* HandicapTracker.xcdatamodel */,
+			);
+			currentVersion = F24A674A20E5763200C1B0BF /* HandicapTracker.xcdatamodel */;
+			path = HandicapTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F296ACC120D3032F0059AF8A /* Project object */;
 }
