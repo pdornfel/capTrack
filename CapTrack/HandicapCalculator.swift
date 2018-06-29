@@ -24,11 +24,11 @@ class HandicapCalculator : Calculator {
         self.index = index
     }
     
-    func currentHandicap() -> Double {
-        return rounded(num: ((self.index * self.slope) / 113))
+    func currentHandicap() -> Int {
+        return Int(rounded(num: ((self.index * self.slope) / 113)))
     }
     
-    func calculateHandicap(shooting score: Double, multiplier: Double) -> Double {        
+    func calculateHandicap(shooting score: Double, multiplier: Double) -> Double {
         //Handicap Differential = (Adjusted Gross Score - Course Rating) X 113 ÷ Slope Rating
         let differential = (score - rating) * 113.0 / slope
         var averaged_diffs_with_current_index = ((differential * multiplier) + index) / (multiplier + 1.0)
@@ -36,6 +36,7 @@ class HandicapCalculator : Calculator {
         let new_index = rounded(num: averaged_diffs_with_current_index)
         //Course Handicap = Index x (Slope Rating of Tee on Course / 113)
         let new_handicap = new_index * rating / 113
+        
         return rounded(num: new_handicap)
     }
     
